@@ -8,11 +8,14 @@ By Nathaniel Orimlade, Zachary Hebert, and Juan Rameriez?
 
 using namespace std;
 
-int main(){
-	system("PAUSE");
+int entryB();
+int entryC();
+int entryD();
+int entryE();
 
+int main(){
 	cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" << endl << endl;
-	cout << "1. bbbb\n2. ccccccc\n3. dddddd\n4. eeeeeeee\n5. Quit";
+	cout << "1. bbbb\n2. ccccccc\n3. dddddd\n4. eeeeeeee\n5. Quit\n";
 
 	int userChoice;
 	cin >> userChoice;
@@ -36,5 +39,22 @@ int main(){
 		cout << "Recongnized inputs: 1, 2, 3, 4, 5.\n";
 	}
 
+	system("PAUSE");
+	return 0;
+}
+
+int entryB(){
+	return 0;
+}
+
+int entryC(){
+	return 0;
+}
+
+int entryD(){
+	return 0;
+}
+
+int entryE(){
 	return 0;
 }

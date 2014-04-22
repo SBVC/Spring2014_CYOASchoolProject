@@ -16,12 +16,6 @@ int entryE();
 
 int main(){
 	entryA();
-
-	system("PAUSE");
-	return 0;
-}
-
-<<<<<<< HEAD
 	cout << "Welcome to Choose Your Own Adventure... Choose wisely...you could be killed at any moment" << endl << endl;
 	cout << "Press a to begin...or any letter really, whichever letter is your favorite, just pick one...come on...any day now\n";
 	cout << "1. a\n2. b\n3. c\n4. d";
@@ -30,9 +24,11 @@ int main(){
 	int userChoice;
 	cin >> userChoice;
 	switch (userChoice)
-		case 0: break 
-		
-=======
+		case 0: break;
+	system("PAUSE");
+	return 0;
+}
+
 int entryA(){
 	cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" << endl << endl;
 	cout << "1. bbbb\n2. ccccccc\n3. dddddd\n4. eeeeeeee\n5. Quit\n";
@@ -65,7 +61,6 @@ int entryA(){
 int entryB(){
 	return 0;
 }
->>>>>>> 7b05bd805694dc5a0e56566c1e4e0591d23296ad
 
 int entryC(){
 	return 0;

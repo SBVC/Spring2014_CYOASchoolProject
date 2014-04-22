@@ -8,12 +8,20 @@ By Nathaniel Orimlade, Zachary Hebert, and Juan Rameriez?
 
 using namespace std;
 
+int entryA();
 int entryB();
 int entryC();
 int entryD();
 int entryE();
 
 int main(){
+	entryA();
+
+	system("PAUSE");
+	return 0;
+}
+
+int entryA(){
 	cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" << endl << endl;
 	cout << "1. bbbb\n2. ccccccc\n3. dddddd\n4. eeeeeeee\n5. Quit\n";
 
@@ -39,7 +47,6 @@ int main(){
 		cout << "Recongnized inputs: 1, 2, 3, 4, 5.\n";
 	}
 
-	system("PAUSE");
 	return 0;
 }
 

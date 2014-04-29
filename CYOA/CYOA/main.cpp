@@ -5,6 +5,7 @@ By Nathaniel Orimlade, Zachary Hebert, and Juan Rameriez
 */
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -18,6 +19,52 @@ int entryE();
 //global variables
 int userChoice;
 
+//classes
+class entry{
+	string text = "\0";
+	unsigned int numChoices = 0;
+	string choice[5] = { "\0", "\0", "\0", "\0", "\0", };
+
+public:
+	//gets
+	string get_text(){
+		return text;
+	}
+
+	int get_numChoices(){
+		return numChoices;
+	}
+
+	string get_choice(int num){
+		return choice[num];
+	}
+
+	//sets
+	int set_text(string newText){
+		if (newText == "")
+			text = "/0";
+		else
+			text = newText;
+		
+		return 0;
+	}
+
+	int set_numChoices(unsigned int newNum){
+		numChoices = newNum;
+
+		return 0;
+	}
+
+	int set_choice(int num, string newText){
+		if (newText == "")
+			choice[num] = "\0";
+		else
+			choice[num] = newText;
+
+		return 0;
+	}
+};
+
 int main(){
 	cout << "Welcome to Choose Your Own Adventure... Choose wisely...you could be killed at any moment" << endl << endl;
 	cout << "Enter 1 to begin...or any number really*, whichever number is your favorite, just pick one...come on...any day now" << endl << endl;
@@ -27,10 +74,10 @@ int main(){
 	cin >> userChoice;
 
 	switch (userChoice){
-		case 0:
-			break;
-		default:
-			entryA();
+	case 0:
+		break;
+	default:
+		entryA();
 	}
 
 	return 0;
@@ -67,28 +114,28 @@ int entryA(){
 
 int entryB(){
 	cout << "\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" << endl << endl;
-	system("pause");
+	//system("pause"); -for debugging
 
 	return 0;
 }
 
 int entryC(){
 	cout << "\nccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" << endl << endl;
-	system("pause");
+	//system("pause"); -for debugging
 
 	return 0;
 }
 
 int entryD(){
 	cout << "\ndddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" << endl << endl;
-	system("pause");
+	//system("pause"); -for debugging
 
 	return 0;
 }
 
 int entryE(){
 	cout << "\neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" << endl << endl;
-	system("pause");
+	//system("pause"); -for debugging
 
 	return 0;
 }

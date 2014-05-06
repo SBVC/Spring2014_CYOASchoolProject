@@ -21,11 +21,20 @@ int userChoice;
 
 //classes
 class entry{
-	string text = "\0";
-	unsigned int numChoices = 0;
-	string choice[5] = { "\0", "\0", "\0", "\0", "\0", };
+	string text;
+	unsigned int numChoices;
+	string choice[5];
 
 public:
+
+	//this is the constructor
+	entry (string a, unsigned int b, string c[5]){
+		text = a;
+		numChoices = b;
+		for (int i = 0; i == 4; i++) {
+			choice[i] = c[i];
+		}
+	}; 
 	//gets
 	string get_text(){
 		return text;
@@ -41,10 +50,7 @@ public:
 
 	//sets
 	int set_text(string newText){
-		if (newText == "")
-			text = "/0";
-		else
-			text = newText;
+		text = newText;
 		
 		return 0;
 	}
@@ -56,14 +62,11 @@ public:
 	}
 
 	int set_choice(int num, string newText){
-		if (newText == "")
-			choice[num] = "\0";
-		else
-			choice[num] = newText;
+		choice[num] = newText;
 
 		return 0;
 	}
-};
+} opening("this will be the opening paragraph.", 4);
 
 int main(){
 	cout << "Welcome to Choose Your Own Adventure... Choose wisely...you could be killed at any moment" << endl << endl;
@@ -77,7 +80,10 @@ int main(){
 	case 0:
 		break;
 	default:
-		entryA();
+		cout << opening.get_text();
+		for (int i = 1; i == opening.get_numChoices(); i++){
+			cout << opening.get_choice(i-1) << endl;
+		}
 	}
 
 	return 0;

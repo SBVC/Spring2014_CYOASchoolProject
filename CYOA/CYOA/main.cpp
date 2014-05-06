@@ -28,12 +28,9 @@ class entry{
 public:
 
 	//this is the constructor
-	entry (string a, unsigned int b, string c[5]){
+	entry (string a, unsigned int b){
 		text = a;
 		numChoices = b;
-		for (int i = 0; i == 4; i++) {
-			choice[i] = c[i];
-		}
 	}; 
 	//gets
 	string get_text(){
@@ -66,7 +63,14 @@ public:
 
 		return 0;
 	}
-} opening("this will be the opening paragraph.", 4);
+};
+
+entry opening("this will be the opening paragraph.", 4);
+
+opening.set_choice(0,"choice1");
+opening.set_choice(1,"choice2");
+opening.set_choice(2,"choice3");
+opening.set_choice(3,"choice4");
 
 int main(){
 	cout << "Welcome to Choose Your Own Adventure... Choose wisely...you could be killed at any moment" << endl << endl;
@@ -85,6 +89,8 @@ int main(){
 			cout << opening.get_choice(i-1) << endl;
 		}
 	}
+
+	system("pause");
 
 	return 0;
 }

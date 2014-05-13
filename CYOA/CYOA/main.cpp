@@ -65,14 +65,15 @@ public:
 	}
 };
 
-entry opening("this will be the opening paragraph.", 4);
-
-opening.set_choice(0,"choice1");
-opening.set_choice(1,"choice2");
-opening.set_choice(2,"choice3");
-opening.set_choice(3,"choice4");
-
 int main(){
+
+	entry opening("\n[ ][ ][ ]\n[ ][X][ ]\n[ ][ ][ ]\n", 4);
+
+	opening.set_choice(0,"Head due north young lass or lad.");
+	opening.set_choice(1,"Head doo east young padawan.");
+	opening.set_choice(2,"Head du south young grasshopper.");
+	opening.set_choice(3,"Head scooby-due west old hag.");
+
 	cout << "Welcome to Choose Your Own Adventure... Choose wisely...you could be killed at any moment" << endl << endl;
 	cout << "Enter 1 to begin...or any number really*, whichever number is your favorite, just pick one...come on...any day now" << endl << endl;
 	cout << "*Enter 0 to quit though**...just saying...you don't HAVE to play...seriously if you don't want to...don't" << endl << endl;
@@ -85,8 +86,8 @@ int main(){
 		break;
 	default:
 		cout << opening.get_text();
-		for (int i = 1; i == opening.get_numChoices(); i++){
-			cout << opening.get_choice(i-1) << endl;
+		for (int i = 0; i == opening.get_numChoices(); i++){
+			cout << opening.get_choice(i) << endl;
 		}
 	}
 
